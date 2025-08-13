@@ -3,4 +3,8 @@
     <key>Version-1.2.0.0</key>
     <status>ok</status>
     <expiry>2026-12-31</expiry>
+    <users>
+        <user>abc</user>
+    </users>
 </license>
+
