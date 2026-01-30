@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Plans Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1300px;  /* Increased container size */
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .table {
+            font-size: 16px;  /* Increased font size */
+            table-layout: fixed;
+            width: 100%;
+            word-wrap: break-word;
+        }
+        .table-wrapper {
+            overflow-x: auto;  /* Horizontal scrolling for Writeback table */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Payment Plans Report</h2>
+
+    <!-- Payment Plans Table -->
+    <div class="table-title" data-bs-toggle="tooltip" data-bs-placement="top" title="This table lists all the subscription plans along with their frequency and the start date.">
+        <h4>Payment Plans</h4>
+    </div>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Frequency</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>bee9_202601290945388393184</td>
+            <td>Day</td>
+            <td>2026-01-30 21:45:20</td>
+        </tr>
+    
+        <tr>
+            <td>bee9_202601290946033473470</td>
+            <td>Day</td>
+            <td>2026-01-30 21:45:23</td>
+        </tr>
+    
+        <tr>
+            <td>bee9_202601290946199289068</td>
+            <td>Day</td>
+            <td>2026-01-30 21:45:46</td>
+        </tr>
+    
+        </tbody>
+    </table>
+
+    <!-- Transactions Table -->
+    <div class="table-title" data-bs-toggle="tooltip" data-bs-placement="top" title="This table shows the latest transaction for each payment plan, including whether the transaction was successful or failed.">
+        <h4>Latest Transactions</h4>
+    </div>
+    <table class="table table-bordered">
+        <thead class="table-info">
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>92426763860219914620260129203041</td>
+            <td>2026-01-29</td>
+            <td class="text-success fw-bold">Success</td>
+        </tr>
+    
+        <tr>
+            <td>18666398340119914620260129203048</td>
+            <td>2026-01-29</td>
+            <td class="text-success fw-bold">Success</td>
+        </tr>
+    
+        <tr>
+            <td>46303556476819914620260129203057</td>
+            <td>2026-01-29</td>
+            <td class="text-success fw-bold">Success</td>
+        </tr>
+    
+        </tbody>
+    </table>
+
+    <!-- Writebacks Table -->
+    <div class="table-title" data-bs-toggle="tooltip" data-bs-placement="top" title="This table provides the writebacks for each transaction, showing whether any issues were encountered.">
+        <h4>Writeback Verification</h4>
+    </div>
+    <div class="table-wrapper">
+    <table class="table table-bordered">
+        <thead class="table-warning">
+            <tr>
+                <th>Writeback</th>
+                <th>Error Message</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>patid='8', Guarid='8', ProcDate='2026-01-30', LtypeDef='Cash', Prov='DOC2', amount=-1.6, EntryDate='2026-01-30', ChequeNo='', bank='', procnote='Cycle: 1|TID:92426763860219914620260129203041', practiceid='1-0', code='70', byprocedurepay='', proclogid='', isperformcreditadjwriteback='', impacts='', user=''</td>
+            <td class="text-success fw-bold">New total Payment Record Inserted Successfully : 980351</td>
+        </tr>
+    
+        <tr>
+            <td>patid='8', Guarid='8', ProcDate='2026-01-30', LtypeDef='Cash', Prov='DOC1', amount=-2.6, EntryDate='2026-01-30', ChequeNo='', bank='', procnote='Cycle: 1|TID:18666398340119914620260129203048', practiceid='1-0', code='70', byprocedurepay='', proclogid='', isperformcreditadjwriteback='', impacts='', user=''</td>
+            <td class="text-success fw-bold">New total Payment Record Inserted Successfully : 980358</td>
+        </tr>
+    
+        <tr>
+            <td>patid='8', Guarid='8', ProcDate='2026-01-30', LtypeDef='Cash', Prov='DOC1', amount=-1.88, EntryDate='2026-01-30', ChequeNo='', bank='', procnote='Cycle: 1|TID:46303556476819914620260129203057', practiceid='1-0', code='70', byprocedurepay='', proclogid='', isperformcreditadjwriteback='', impacts='', user=''</td>
+            <td class="text-success fw-bold">New total Payment Record Inserted Successfully : 980352</td>
+        </tr>
+    
+        </tbody>
+    </table>
+    </div>
+
+    <!-- PMS Posting Table -->
+    <div class="table-title">
+        <h4>PMS Posting Details</h4>
+    </div>
+    <div class="table-wrapper">
+        <table class="table table-bordered">
+            <thead class="table-primary">
+                <tr>
+                    <th>TID</th>
+                    <th>Date</th>
+                    <th>Paynote</th>
+                </tr>
+            </thead>
+            <tbody>
+
+        <tr>
+            <td>92426763860219914620260129203041</td>
+            <td>2026-01-30</td>
+            <td>Cycle: 1|TID:92426763860219914620260129203041</td>
+        </tr>
+    
+        <tr>
+            <td>18666398340119914620260129203048</td>
+            <td>2026-01-30</td>
+            <td>Cycle: 1|TID:18666398340119914620260129203048</td>
+        </tr>
+    
+        <tr>
+            <td>46303556476819914620260129203057</td>
+            <td>2026-01-30</td>
+            <td>Cycle: 1|TID:46303556476819914620260129203057</td>
+        </tr>
+    
+        </tbody>
+    </table>
+    </div>
+</div>
+<script>
+    // Initialize Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+</body>
+</html>
